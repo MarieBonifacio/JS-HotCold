@@ -1,0 +1,72 @@
+:root{
+    --backgroundTableColor : rgba(222,184,135 ,0.8);
+    --BigFontColor : rgba(128,0,0 ,1);
+    --LitleFontSize : 20px; 
+    --BigFontSize : 50px;
+}
+
+th{
+    color: var(--BigFontColor);
+}
+
+body{
+    display: flex;
+    flex-direction: row;
+    background-image: url("fondbois.jpg"); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    justify-content: center;
+    margin-top: 10vh;
+}
+
+table,td{
+    border: 8px solid black;
+    border-collapse: collapse;
+    font-style: italic;
+    font-size: var(--LitleFontSize);
+    padding: 6vw;
+}
+
+table{
+    width: 60vh;
+    height: 30vh;
+    background-color: var(--backgroundTableColor);
+}
+
+button{
+    width: 140px;
+    height: 45px;
+    margin: 15px 15px;
+    background-color: var(--BigFontColor);
+    color: var(--backgroundTableColor);
+    border: solid black 3px;
+    font-weight: bold;
+}
+
+.result{
+    font-weight: bolder;
+    font-size: var(--BigFontSize);
+    padding: auto;
+    color: var(--BigFontColor)
+}
+
+.anim{
+    animation-name: result;
+    animation-duration: 0.1s; 
+    animation-timing-function: linear; 
+    animation-iteration-count: 6; 
+    width: 200px;
+    font-weight: bolder;
+    font-size: var(--BigFontSize);
+    padding: auto;
+    color: green;
+}
+
+
+@keyframes result{
+    15%{transform: rotate(40deg)}
+    60%{transform: rotate(180deg)}
+    100%{transform: rotate(360deg)}
+}
