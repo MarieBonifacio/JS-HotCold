@@ -38,7 +38,7 @@ bouton.addEventListener("click", function(){
         document.querySelector(".result").innerHTML = "C'est très froid...";
     }
         if(tours>=5 && tours<=9){
-            document.querySelector(".result").innerHTML = "Indice : le nombre se situe entre " + (chiffreHasard - 5) + " et " + (chiffreHasard + 5);
+            document.querySelector(".result").innerHTML = "Indice : le nombre se situe entre " + (chiffreHasard - 6) + " et " + (chiffreHasard + 4);
         }else if(tours==10){
             document.querySelector("#jeu").style.display="none";
             document.querySelector(".result").innerHTML = "Vous avez effectué vos 10 tours, c'est perdu !" 
