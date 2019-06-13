@@ -31,19 +31,19 @@ bouton.addEventListener("click", function(){
         //animation = animation +2
         console.log("Fin du script JS.")
     } else if(dif <= 10 && dif >= -10){
-        document.querySelector(".result").innerHTML = "C'est chaud !";
-    } else if(tours==5 || tours==6 ||tours==7 ||tours==8 ||tours==9){
-        document.querySelector(".result").innerHTML = "Indice : le nombre se situe entre " + (chiffreHasard - 5) + " et " + (chiffreHasard + 5);
-    }else if(tours==10){
-        document.querySelector("#jeu").style.display="none";
-        document.querySelector(".result").innerHTML = "Vous avez effectué vos 10 tours, c'est perdu !" 
-        console.log("Fin du script JS.")
+        document.querySelector(".result").innerHTML = "C'est chaud !";   
     }else if ((dif >= 11 && dif <= 30) || (dif <= -11 && dif>= -30)){
         document.querySelector(".result").innerHTML = "C'est froid...";
-
     }else{
         document.querySelector(".result").innerHTML = "C'est très froid...";
-    }    
+    }
+        if(tours>=5 && tours<=9){
+            document.querySelector(".result").innerHTML = "Indice : le nombre se situe entre " + (chiffreHasard - 5) + " et " + (chiffreHasard + 5);
+        }else if(tours==10){
+            document.querySelector("#jeu").style.display="none";
+            document.querySelector(".result").innerHTML = "Vous avez effectué vos 10 tours, c'est perdu !" 
+        console.log("Fin du script JS.")  
+    } 
     document.getElementById("nbtour").innerHTML = "Vous avez effectué " + tours + " tour(s).";
     tours++
     });
